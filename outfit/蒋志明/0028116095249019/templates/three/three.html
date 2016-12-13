@@ -1,0 +1,28 @@
+<ion-view view-title="爱心旅行社" id="three-ion">
+    <ion-content>
+        <ion-list ng-repeat="item in diary">
+            <ion-item class="item item-image">
+            <img src="{{item.imageurl}}" style="width: 100%;display: block;">
+        </ion-item>
+            <ion-item>
+                游记分享：
+                <p style="white-space: normal;padding:0 10px 0 35px;text-indent: 2em;">{{item.text}}</p>
+            </ion-item>
+            <ion-item class="item tabs tabs-icon-left assertive">
+                <a class="tab-item" ng-click="jia(item)">
+                    <i class="icon ion-thumbsup"></i><span style="color: red">{{item.zan.number}}</span>
+                </a>
+                <a class="tab-item" ng-click="jian(item)">
+                    <i class="icon ion-thumbsdown"></i><span style="color: red">{{item.cai.number}}</span>
+                </a>
+                <a class="tab-item">
+                    <i class="icon ion-chatbox"></i>评论
+                </a>
+                <a class="tab-item">
+                    <i class="icon ion-share"></i>分享
+                </a>
+            </ion-item>
+        </ion-list>
+        <ion-infinite-scroll on-infinite="loadMore()" immediate-check="false"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

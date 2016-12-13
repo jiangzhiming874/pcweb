@@ -1,0 +1,17 @@
+<ion-view view-title="爱心旅行社" id="one-ion">
+    <ion-content>
+        <ion-slide-box auto-play="true" slide-interval="2000" does-continue="true">
+            <ion-slide ng-repeat="item in data">
+                <img ng-src="{{item.img}}" style="display: block;">
+            </ion-slide>
+        </ion-slide-box>
+        <div class="list">
+            <div class="item item-thumbnail-left item-icon-right" ng-repeat="bog in taya">
+                <img src="{{bog.img}}" style="width: 100%">
+                <h3>{{bog.name}}</h3>
+                <p>{{bog.cont}}</p>
+                <a ui-sref="detail" class="icon ion-chevron-right icon-accessory"></a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

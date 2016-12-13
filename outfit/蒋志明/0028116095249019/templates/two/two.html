@@ -1,0 +1,10 @@
+<ion-view view-title="爱心旅行社" id="two-ion">
+    <ion-content>
+        <div class="row" style="flex-wrap: wrap">
+            <a ui-sref="detail" class="col col-33" ng-repeat="item in date">
+                <img src="{{item.imageUrl}}">
+                <span id="col-span">{{item.country}}</span>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>
